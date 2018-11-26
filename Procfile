@@ -1,1 +1,1 @@
-web: gunicorn kira-properties-app.wsgi:application
+web: gunicorn properties.wsgi:application
