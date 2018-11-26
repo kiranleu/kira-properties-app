@@ -1,0 +1,1 @@
+web: gunicorn kira-property-app.wsgi:application
