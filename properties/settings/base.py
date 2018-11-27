@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'reviews',
     'rentedproperties',
     'django_forms_bootstrap',
+    'storages'
 ]
 
 MIDDLEWARE = [
