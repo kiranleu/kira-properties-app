@@ -1,0 +1,46 @@
+{% extends "base.html" %} {% block content %}
+{% load bootstrap_tags %}
+<div class="container-fluid">
+    <div class="row">
+        <h1>Property Details</h1>
+        <div class="col-sm4">
+            <div class="thumbnail">
+
+                <img src="{{MEDIA_URL}}{{property.image}}" alt="">
+                <h1><b>{{property.type_property}}</b></h1>
+                <p><h1>{{property.address}}</h1></p>
+                <p>Description:</br>
+                   {{property.description}}</p>
+                <p>Price: {{property.price}} €</p> 
+                <p>Landlord: {{property.landlord}}</p>
+                <p>Tenant:{{property.tenant}}</p>
+            </div>
+        </div>
+    </div>
+    
+    <hr>
+<h2>Reviews</h2>
+<hr>
+{% if user.is_authenticated %}
+<form method="POST" action="{% url 'write_review' property.id %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    
+    <input type="submit" value="Submit"/>
+</form>
+{% endif %}
+<hr>
+<div>
+    {% for review in properties.reviews.all|dictsortreversed:'created_date' %}
+    
+    
+    <h3>{{ review.title }} - <i>{{ review.author }}</i></h3>
+    <p>{{ review.content }}</p>
+    {{ review.property }}
+    <hr>
+    
+    {% endfor %}
+    
+</div>
+
+    {% endblock %}
