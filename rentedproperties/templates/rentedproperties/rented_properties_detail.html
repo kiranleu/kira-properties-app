@@ -1,4 +1,4 @@
-{% extends "base.html" %} {% block content %}
+{% extends 'base.html' %} {% block content %}
 {% load bootstrap_tags %}
 <div class="container-fluid">
     <div class="row">
@@ -12,8 +12,16 @@
                 <p>Description:</br>
                    {{property.description}}</p>
                 <p>Price: {{property.price}} €</p> 
-                <p>Landlord: {{property.landlord}}</p>
-                <p>Tenant:{{property.tenant}}</p>
+                <h3><i>Landlord Details</i></h3>
+                <p> Name:{{property.landlord}}</p>
+                <p></p>
+                 <div class='col-sm2'>
+        
+    
+                <h3><i>Tenant Details</i></h3>
+                <p>Name:{{property.tenant}}</p>
+                <p>Gender:{{property.tenant}}</p>
+              
             </div>
         </div>
     </div>
@@ -31,12 +39,12 @@
 {% endif %}
 <hr>
 <div>
-    {% for review in properties.reviews.all|dictsortreversed:'created_date' %}
+    {% for review in property.reviews.all|dictsortreversed:'created_date' %}
     
     
-    <h3>{{ review.title }} - <i>{{ review.author }}</i></h3>
+    <h3>{{ review.title }}  <i>{{ review.tenant.full_name }}</i></h3>
     <p>{{ review.content }}</p>
-    {{ review.property }}
+    
     <hr>
     
     {% endfor %}

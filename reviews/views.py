@@ -1,12 +1,12 @@
 from django.shortcuts import render, redirect
+from rentedproperties.views import property_detail
 from .forms import ReviewForm
 from rentedproperties.models import Property
 
 def write_review(request, id):
     form = ReviewForm(request.POST)
     review = form.save(commit=False)
-    properties = get_object_or_404(Property, pk=id)
-    review.property_id = id
-    review.author = request.user
+    review.the_property_id = id
+    review.profile_id = request.user
     review.save()
-    return redirect("property_detail", {'properties': properties}) 
+    return redirect('property_detail', id=id)

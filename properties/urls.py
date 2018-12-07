@@ -18,11 +18,16 @@ from django.urls import path, include
 from django.views.static import serve
 from django.conf import settings
 from accounts.views import signup, show_profile
-from rentedproperties.views import property_list, property_detail
+from rentedproperties.views import property_list, property_detail, add_property
 from reviews.views import write_review
+
+
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',property_list, name='home'),
+    path('add_property/', add_property, name='add_property'),
     path('accounts/profile/',show_profile, name='profile'),
     path('accounts/', include('django.contrib.auth.urls')),
     path('accounts/signup/', signup, name='signup'),

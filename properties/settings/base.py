@@ -46,7 +46,9 @@ INSTALLED_APPS = [
     'reviews',
     'rentedproperties',
     'django_forms_bootstrap',
-    'storages'
+    'storages',
+    
+    
 ]
 
 MIDDLEWARE = [
@@ -66,7 +68,7 @@ ROOT_URLCONF = 'properties.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -110,6 +112,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
+
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
 
@@ -128,3 +131,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
+
+LOGIN_REDIRECT_URL='/'
+LOGOUT_REDIRECT_URL='/'
