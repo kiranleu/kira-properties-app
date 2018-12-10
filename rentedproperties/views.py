@@ -8,6 +8,9 @@ from django.utils import timezone
 
 
 # Create your views here.
+def home_page(request):
+    return render(request, "rentedproperties/homepage.html")
+    
 def property_list(request):
     properties = Property.objects.all()
     return render(request, "rentedproperties/rented_properties_list.html", {'properties': properties})

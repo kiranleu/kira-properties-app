@@ -2,7 +2,7 @@
 {% load bootstrap_tags %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head class="parallax">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -11,18 +11,20 @@
     {% block head_style %}
     <link rel="stylesheet" href="https://bootswatch.com/3/sandstone/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+    <link rel="stylesheet" href="https://bootswatch.com/4/litera/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     {% endblock head_style %}
     
-    {% block head_js %}
+    {% block head_scripts %}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     
-    {% endblock head_js %}
+    {% endblock head_scripts %}
 </head>
 <body>
+    
     <!-- Fixed masthead -->
-    <nav class="navbar navbar-masthead navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -31,7 +33,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/">ReviewMyLandlord</a>
+                <a class="navbar-brand" href="/" ><img src="{% static 'images/logo.png' %}"> ReviewMyLandlord</a>
             </div>
             
             <div id="navbar" class="navbar-collapse collapse">
@@ -57,6 +59,7 @@
         </div>
     </nav>
     
+    
   
     <div class="container">
         <br>
@@ -64,6 +67,7 @@
         {% block content %} {% endblock %}
         </div>
     </div>
+    
     <footer>
         <div class="container">
             <p>Made by Code Institute bootcampers</p>
