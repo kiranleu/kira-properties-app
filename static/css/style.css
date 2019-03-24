@@ -50,25 +50,12 @@ a, a:hover {
     width: 100%;
 }
 
-.navbar-brand{
-    padding: 10px 10px;
-   
-}
 
 #logo {
     color: #12AB82;
 }
 
-#RevieMyLandlordLogo{
-    font-size: 15px;
-    line-height: 72px;
-    font-weight: 500;
-}
 
-.navbar-nav>li>a {
-    padding-right: 120px;
-    
-}
 
 /**************************************       FOOTER   **************************************************************************/
 
