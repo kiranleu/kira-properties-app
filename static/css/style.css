@@ -59,16 +59,15 @@ a, a:hover {
     color: #12AB82;
 }
 
-.navbar .nav>li>a {
+#RevieMyLandlordLogo{
     font-size: 15px;
     line-height: 72px;
     font-weight: 500;
 }
 
 .navbar-nav>li>a {
-    padding-top: 10px;
     padding-right: 120px;
-    line-height: 20px;
+    
 }
 
 /**************************************       FOOTER   **************************************************************************/
