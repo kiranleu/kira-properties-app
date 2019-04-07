@@ -5,7 +5,7 @@
 
 
 <div class="col-md-6">
-<img src="{{ MEDIA_URL}}{{ request.user.profile.image }}"/>
+<img id="avatar" src="{{ MEDIA_URL}}{{ request.user.profile.image }}"/>
 </div>
 
 <div class="col-md-6">
@@ -26,10 +26,17 @@
     <input type="submit" value="pay"/>
 </form>
 {% else %}
-<p>We have no credit card on file. <a href="{% url 'add_credit_card' %}">Add one</a></p>
+<p>We have no credit card on file. </p>
+
+<p> Would you like to <a class="linkonGreen" href="{% url 'add_credit_card' %}">ADD ONE ?</a></p>
 {% endif %}
 
 <h3>Subscription</h3>
+
+    <p class="smallertext"> If you would like to subscribe and start reviewing landlords around you, please click on the Add card link 
+        to proceed and add your credit/debit card.
+        
+        Once we have your card number on record: You can choose a subscription.</p>
 {% if request.user.profile.subscription_id %}
     {%if subscription.status == "active" %}
         <table class="table profile-user-details ">

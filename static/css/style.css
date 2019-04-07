@@ -47,11 +47,10 @@ a, a:hover {
 button, select{
     text-transform: none;
     background-color: #02B875;
-    /* padding-top: 30px; */
     border-radius: 10px;
     font-size: 14px;
     width: 100%;
-    height: 28%;
+   
 }
 /*********************************************     NAVBAR          ******************************************************************************/
 .navbar .nav>li>a {
@@ -105,6 +104,15 @@ h1{font-size: 2.6575rem;
 
 form {
     margin-top: 103px;
+    margin-bottom: 300px;
+
+}
+
+ h2 {
+    margin-bottom: 0.5rem;
+    margin-top: 7rem;
+    font-weight: 700;
+    line-height: 1.2;
 }
 
 /**************************************SIGN UP PAGE  **************************************************************************/
@@ -115,6 +123,36 @@ h2, .h2 {
     margin-right: 72px;
 }
 
+/**************************************  PROFILE PAGE  **************************************************************************/
+#avatar {
+    margin-top: 40px;
+    border-radius: 30px;
+}
+
+p{
+    font-family: Roboto, Cambria, "Times New Roman", Times, serif;
+    font-size: 20px;
+    font-style: italic;
+    margin-top: 39px;
+    margin-bottom: 1rem;
+}
+
+   h3{
+    color:  #02B875;
+    font-weight: 50;
+    font-style: inherit;
+    line-height: 1.2;
+    margin-top: 14rem;
+    font-weight: 800;
+}
+
+.smallertext{
+      background-color: #02B875;
+      font-size:; 10px;
+}
+.linkonGreen{
+    color: #02B875
+}
 /**************************************       FOOTER   **************************************************************************/
 
 footer {
