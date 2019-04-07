@@ -20,6 +20,7 @@ h1, h1 a {
     text-decoration: none;
 }
 
+
 #masthead {
     padding-left:10px;
     min-height: 199px;
@@ -43,7 +44,13 @@ a, a:hover {
 
 
 /*********************************************     NAVBAR          ******************************************************************************/
-
+.navbar .nav>li>a {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-right: 30px;
+}
 .navbar.affix {
     position: fixed;
     top: 0;
@@ -56,6 +63,16 @@ a, a:hover {
 }
 
 
+/**************************************       HOMEPAGE   **************************************************************************/
+
+
+/**************************************ADDED-PROPERTY PAGE(LIST OF PROPERTIES)   **************************************************************************/
+
+h1{font-size: 2.6575rem;
+    margin-top: 90px;
+    margin-bottom: 90px;
+    padding-left: 26px;
+}
 
 /**************************************       FOOTER   **************************************************************************/
 
@@ -148,14 +165,7 @@ footer {
 }
 
 
-
-img {
-    vertical-align: middle;
-    border-style: none;
-    width: 118px;
-    height: 76px;
-}
-
-.bg{
-    background-image: url('static/images/logo.png');
+#bodyHomePage{
+    /*background-image: url('static/images/logo.png');*/
+    background-color: blue;
 }
