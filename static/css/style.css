@@ -18,8 +18,10 @@ body {
 h1, h1 a {
     color: #555555;
     text-decoration: none;
+   
 }
-
+ h1{font-size: 2.6575rem;
+}
 
 #masthead {
     padding-left:10px;
@@ -42,7 +44,15 @@ a, a:hover {
     text-decoration: none;
 }
 
-
+button, select{
+    text-transform: none;
+    background-color: #02B875;
+    /* padding-top: 30px; */
+    border-radius: 10px;
+    font-size: 14px;
+    width: 100%;
+    height: 28%;
+}
 /*********************************************     NAVBAR          ******************************************************************************/
 .navbar .nav>li>a {
     font-size: 14px;
@@ -72,6 +82,37 @@ h1{font-size: 2.6575rem;
     margin-top: 90px;
     margin-bottom: 90px;
     padding-left: 26px;
+}
+
+form-control {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + 1rem + 2px);
+    padding: 2.5rem 30.1rem;
+    font-size: 1.063rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+}
+h1{font-size: 2.6575rem;
+}
+/**************************************LOG IN PAGE **************************************************************************/
+
+form {
+    margin-top: 103px;
+}
+
+/**************************************SIGN UP PAGE  **************************************************************************/
+
+
+h2, .h2 {
+    font-size: 2.126rem;
+    margin-right: 72px;
 }
 
 /**************************************       FOOTER   **************************************************************************/
