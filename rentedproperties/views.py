@@ -25,7 +25,7 @@ def property_detail(request, id):
 def add_property(request):
     if request.method == "POST":
         form = PropertyForm(request.POST, request.FILES)
-        profile = Profile.objects.create(user=request.user)
+        
 
         if form.is_valid():
             new_property=form.save(commit=False)
