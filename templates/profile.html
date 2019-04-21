@@ -34,9 +34,7 @@
 <h3>Subscription</h3>
 
     <p class="smallertext"> If you would like to subscribe and start reviewing landlords around you, please click on the Add card link 
-        to proceed and add your credit/debit card.
-        
-        Once we have your card number on record: You can choose a subscription.</p>
+        to proceed and add your credit/debit card.Once we have your card number on record: You can choose a subscription.</p>
 {% if request.user.profile.subscription_id %}
     {%if subscription.status == "active" %}
         <table class="table profile-user-details ">
@@ -70,8 +68,8 @@
         <a href="{% url 'subscriptions' %}"class="btn btn-success pull-right">Subscription</a>
     {% endif %}
 {% else %}
-    <p>You do not have an active subscription.</p>
-    <a href="{% url 'subscribe' %}">Subscribe</a>
+    <p>You do not have an active subscription yet :( !</p>
+    <a class="linkonGreen" href="{% url 'subscribe' %}"> Please, Subscribe Here and Start Reviewing your landlords!!!!</a>
     
 {% endif %}
 

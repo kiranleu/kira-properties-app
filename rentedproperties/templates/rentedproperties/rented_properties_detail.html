@@ -32,6 +32,7 @@
 {% if user.is_authenticated %}
 <form method="POST" action="{% url 'write_review' property.id %}">
     {% csrf_token %}
+    <p> Write the review of the landlord/landlady and house wihtin this form, please.</p>
     {{ form.as_p }}
     
     <input type="submit" value="Submit"/>
@@ -39,6 +40,8 @@
 {% endif %}
 <hr>
 <div>
+    <h2>Reviews</h2>
+    <p>You can see here all the reviews of people who had lived here previously</p>
     {% for review in property.reviews.all|dictsortreversed:'created_date' %}
     
     
