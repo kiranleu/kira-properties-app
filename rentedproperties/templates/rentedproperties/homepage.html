@@ -5,24 +5,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>ReviewMyLandlord</title>
 </head>
 
-<body id="bodyHomePage">
+<body>
+<div class="contianer" id="bodyHomePage">
 
-<div class="bg"></div>
+    <div class="col-sm-12">
 
-<p> <img  class="logoHomePage" src="{% static 'images/logo.png' %}" text-align="center"> ReviewMyLandlord</a> </p>
+    <p> <img  class="logoHomePage" src="{% static 'images/logo.png' %}" text-align="center"></a></p>
+    </div>
 
-
+    <div class="col-sm-12">
+        <h1> Welcome</h1>
+        <p> This is the Reviews Page you always wish will exist before!</p>
+        <hr>
+        <h2> What Is Review My Landlord</h2>
+        <hr>
+        <p> ReviewMyLandlord sis a Web were we all tenants can we describe our landlords/landladies</p>
+        <p>This Web contains information and reviews from all over the world</p>
+        <p> Please click on Go to Home to star reading, reviewing and even adding properties to be review.</p>
+        
+    </div>
  
       
     
      
-   <a href="{% url 'home' %}"> <input class="btn btn-primary"  name="home" type="submit" value="Home"></a>
+  <button class="buttonHome"><a href="{% url 'home' %}"><input class="btn btn-lg-default" name="home" type="submit" value="GO TO HOME"></a></button>
+   </div>
 </body>
 
 </html>
 
 
-     
+
+    

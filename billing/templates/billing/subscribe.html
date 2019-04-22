@@ -1,20 +1,39 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Subscribe</h1>
-
-<h2>Annual Subscription</h2>
+<div class="container">
+    <div class="col-sm-12">
+        <h1>Subscribe</h1>
+        <div class="col-sm-6">
+            <p class="smallertext1">We currently have two types of subscriptions.
+            Both are for support this project!</p>
+            <p class="smallertext1">Having a subscription will let you add properties and read all the reviews as well as 
+            you will receive a notification with each property added around your area of interest.</p>
+        </div>
+            <hr>
+    </div>
+<div class="col-sm-12">
 <form method="POST" action='{% url 'subscribe' %}'>
     {% csrf_token %}
+    <h2 class="textSubscription">Annual Subscription</h2>
+    <p class="textInRed">Please add a card first in order to sign for the subscription type<a class="linkonGreen" href="{% url 'add_credit_card' %}">HERE</a></p>
     <input type="hidden" value="plan_E4PRgrvIV3I3FC" name="plan"/>
-    <input class="btn btn-default" type="submit" value="Purchase €99.90"/>
+   <button class="textSubscription"> <input class="btn btn-default" type="submit" value="Purchase €99.90"/></button>
 </form>
-
-<h2>Monthly Subscription</h2>
+</div>
+<div class="col-sm-12">
+    <p>Please helps us to mantain this project by signing up to the Subscription!</p>
+    
+</div>
+<div class="col-sm-12">
 <form method="POST" action='{% url 'subscribe' %}'>
-    {% csrf_token %}
+     {% csrf_token %}
+    <h2 class="textSubscription">Monthly Subscription</h2>
+    <p class="textInRed">Please add a card first in order to sign for the subscription type<a class="linkonGreen" href="{% url 'add_credit_card' %}"></a>HERE</p>
+   
     <input type="hidden" value="plan_E4PPWPxZTSg7dR" name="plan"/>
-    <input class="btn btn-default" type="submit" value="Purchase €9.99"/>
+    <button class="textSubscription"><input class="btn btn-default" type="submit" value="Purchase €9.99"/></button>
 </form>
-
+</div>
+</div>
 {% endblock %}

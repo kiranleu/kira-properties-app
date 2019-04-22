@@ -89,7 +89,13 @@ button, select{
 
 /**************************************       HOMEPAGE   **************************************************************************/
 
+#bodyHomePage{
+    background-color: #02B875;
+}
 
+.buttonHome{
+    background-color: #02B875
+}
 /**************************************ADDED-PROPERTY PAGE(LIST OF PROPERTIES)   **************************************************************************/
 
 h1{font-size: 2.6575rem;
@@ -163,10 +169,36 @@ p{
 
 .smallertext{
       background-color: #02B875;
-      font-size:; 10px;
+      font-size: 12px;
+      font-style: italic;
 }
 .linkonGreen{
-    color: #02B875
+    color: #02B875;
+}
+
+/**************************************  SUBSCRIBE PAGE  **************************************************************************/
+
+.textSubscription{
+    display:content;
+}
+
+.smallertext1{
+      border-color: #02B875;
+      border-style: solid;
+      font-size: 11px;
+      font-style: italic;
+}
+.textInOrange{
+    color: orange;
+    font-size: 18px;
+    font-style: bold;
+    
+}
+
+.textInRed{
+    color:red;
+    font-size: 15px;
+    font-style: oblique;
 }
 /**************************************       FOOTER   **************************************************************************/
 

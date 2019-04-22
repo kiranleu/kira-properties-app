@@ -61,7 +61,8 @@ def subscribe(request):
         request.user.profile.save()
         return redirect('profile')
     else:
-        return render(request, 'billing/subscribe.html')
+        return render(request,'billing/subscribe.html')
+    
         
         
 def unsubscribe(request):
