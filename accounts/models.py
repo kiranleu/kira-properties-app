@@ -13,5 +13,5 @@ class Profile(models.Model):
     subscription_id = models.CharField(max_length=80, blank=True, null=True)
     
     
-    def __str__(self):
+    def __str_ (self):
         return "{0}  {1}".format(self.user.first_name, self.user.last_name)
